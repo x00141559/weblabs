@@ -25,13 +25,13 @@ body{
         nav {
           
             padding: 5px;
-            background: #9775AA;
+            background: #B8B3E9;
             border: 1px solid #ccc;
            flex-grow:true;
             width: 84.4%;
             float:center;
             margin-left:4em;
-            margin-right:40em;
+          
             margin-bottom:0em;
           
 
@@ -52,9 +52,7 @@ body{
 
             text-align: center;
             border-left: 1px solid #fff;
-          
-            width: 16.6667%; /* fallback for non-calc() browsers */
-            width: calc(100% / 9);
+        
             box-sizing: border-box;
         }
 

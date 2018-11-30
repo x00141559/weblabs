@@ -55,14 +55,14 @@ constructor(props){
           button
           {
           	background-color:white;
-            color: purple;
+            color: #90E0F3;
             float: center;
             margin-left:2em;
           }
             h3{
                 float: center;
           }
-          background-color: #BFA6CC;
+          background-color: #E0E2DB;
           text:white;
           margin-left:4em;
           margin-right: 10em;
