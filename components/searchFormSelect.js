@@ -19,9 +19,9 @@ constructor(props){
 
   formSubmitted = event => {
     // Validate input value
-    if (event.target.selectedOption.value != "") {
+    if (event.target.newsSource.value != "") {
      
-      this.props.setNewsSource(event.target.selectedOption.value);
+      this.props.setNewsSource(event.target.newsSource.value);
     }
     // prevent page reload (prevent submit)
     event.preventDefault();
@@ -45,7 +45,7 @@ constructor(props){
         onChange={this.handleChange}
         options={options}
         form={SearchForm}
-
+onSubmit={this.formSubmitted}
       />
       </form>
            <button>Update News</button>
