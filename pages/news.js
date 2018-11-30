@@ -1,5 +1,5 @@
 // This is the Link API
-
+import Select from 'react-select';
 
 import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';

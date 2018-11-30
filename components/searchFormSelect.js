@@ -17,21 +17,38 @@ constructor(props){
      };
        }
 
+  formSubmitted = event => {
+    // Validate input value
+    if (event.target.newsSource.value != "") {
+     
+      this.props.setNewsSource(event.target.newsSource.value);
+    }
+    // prevent page reload (prevent submit)
+    event.preventDefault();
+  };
   handleChange = (selectedOption) => {
     
-      this.props.setState(event.target.selectedOption.value);
+      this.setState(event.target.selectedOption);
     console.log(`Option selected:`, selectedOption.value);
   }
   render() {
          const {selectedOption} = this.state;
 
     return (
+    	  <div id="search">
+       
+          <h3>Enter newsapi.org source</h3>
     	
+    	   <form onSubmit={this.formSubmitted}>
       <Select
         value={selectedOption.value}
         onChange={this.handleChange}
         options={options}
+        form={SearchForm}
+
       />
+      </form>
+         </div>
     );
   }
 }
@@ -49,26 +66,4 @@ constructor(props){
 
 
 
-
-
-// render(){
-// 		
-// const options = [
-//   { value: 'chocolate', label: 'Chocolate' },
-//   { value: 'strawberry', label: 'Strawberry' },
-//   { value: 'vanilla', label: 'Vanilla' }
-// ];
-// 	}
-
-	
-//  //return (
-//       // <SearchFormSelect setNewsSource={this.setNewsSource}
-//       //   value={selectedOption}
-//       //   onChange={this.handleChange}
-//       //   options={options}
-    
-//       ///>
-//     ///);
-//   //}
-// }
 

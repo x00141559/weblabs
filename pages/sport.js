@@ -1,12 +1,12 @@
 // This is the Link API
-
+import Select from 'react-select';
 
 import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 var dateFormat = require('dateformat');
 // import React from 'react';
 import SearchForm from '../components/SearchForm';
-
+import SearchFormSelect from '../components/searchFormSelect';
 const apiKey  = '7b5bfb90c5e5474ba7910d596b4f2114';
 const defaultNewsSource = 'nfl-news';
 
@@ -70,7 +70,7 @@ export default class Sport extends React.Component{
         <div>
             { /* Add the SearchForm component */}
         { /* Pass the setNewsSource function as a prop with the same name*/}
-        <SearchForm setNewsSource={this.setNewsSource} />
+        <SearchFormSelect setNewsSource={this.setNewsSource} />
         { /* Example search links - note using name attribute for parameters(!!) */}
         <ul className="newsMenu">
           <li><a href="#" onClick={this.searchNewsAPI} name="top-headlines?country=ie">Top Headlines Ireland</a></li>

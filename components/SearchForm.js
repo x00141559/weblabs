@@ -35,10 +35,12 @@ export default class SearchForm extends Component {
               name="options"
               placeholder="News Source name"
               type="Select"
-
+              select="options"
+             
             />
             {/* Button click will trigger submit */}
             <button>Update News</button>
+            <options/>
           </form>
         </div>
           <style jsx>{`
