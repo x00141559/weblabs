@@ -15,7 +15,7 @@ export default class SearchForm extends Component {
     // Validate input value
     if (event.target.newsSource.value != "") {
      
-      this.props.setNewsSource(event.target.newsSource.value);
+      this.props.setNewsSource(event.target.newsSource);
     }
     // prevent page reload (prevent submit)
     event.preventDefault();

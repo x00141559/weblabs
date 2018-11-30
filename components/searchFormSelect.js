@@ -19,9 +19,9 @@ constructor(props){
 
   formSubmitted = event => {
     // Validate input value
-    if (event.target.newsSource.value != "") {
+    if (event.target.selectedOption.value != "") {
      
-      this.props.setNewsSource(event.target.newsSource.value);
+      this.props.setNewsSource(event.target.selectedOption.value);
     }
     // prevent page reload (prevent submit)
     event.preventDefault();
@@ -29,7 +29,7 @@ constructor(props){
   handleChange = (selectedOption) => {
     
       this.setState(event.target.selectedOption);
-    console.log(`Option selected:`, selectedOption.value);
+    console.log(`Option selected:`, selectedOption);
   }
   render() {
          const {selectedOption} = this.state;
@@ -48,6 +48,7 @@ constructor(props){
 
       />
       </form>
+           <button>Update News</button>
          </div>
     );
   }

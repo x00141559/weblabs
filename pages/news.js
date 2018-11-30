@@ -6,7 +6,7 @@ import fetch from 'isomorphic-unfetch';
 var dateFormat = require('dateformat');
 // import React from 'react';
 import SearchForm from '../components/SearchForm';
-import searchFormSelect from '../components/searchFormSelect';
+import SearchFormSelect from '../components/searchFormSelect';
 const apiKey  = '7b5bfb90c5e5474ba7910d596b4f2114';
 const defaultNewsSource = 'the-lad-bible';
 
@@ -36,22 +36,24 @@ export default class News extends React.Component{
       newsSource: "",
       url: "",
       articles: [],    
-     options: " "
+   
     }
   }
 
-  setNewsSource = (input) => {
+    setNewsSource = (input) => {
     this.setState = ({
       newsSource: input,
       url: `https://newsapi.org/v2/top-headlines?sources=${input}&apiKey=${apiKey}`
     })
   }
 
+    
+
   searchNewsAPI = (event) => {
     // set state values - this will trigger an update and componentDidUpdate
     this.setState({
       // Get the link text
-      newsSource: `${event.target.innerText}`,
+      newsSource: `${event.target.selectedOption}`,
       // Build the search URL using the link name
       url: `https://newsapi.org/v2/${event.target.name}&apiKey=${apiKey}`
     })
@@ -70,7 +72,7 @@ export default class News extends React.Component{
         <div>
             { /* Add the SearchForm component */}
         { /* Pass the setNewsSource function as a prop with the same name*/}
-        <searchFormSelect options={this.options} />
+          <SearchFormSelect setNewsSource={this.setNewsSource} />
 
         { /* Example search links - note using name attribute for parameters(!!) */}
         <ul className="newsMenu">
