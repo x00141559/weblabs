@@ -100,9 +100,9 @@ export default class Music extends React.Component{
           ))}
         </div>
 
-            <style jsx>{`
-        .newsMenu{
-          float: center;
+      <style jsx>{`
+          search{
+               float: center;
           background-color: #BFA6CC;
           text:white;
           margin-left:4em;
@@ -111,6 +111,29 @@ export default class Music extends React.Component{
           font-style:new-times-roman;
           font-size:1em;
           margin-top:0em;
+            padding: 5px 0;
+            text-align: center;
+            border-left: 1px solid #fff;
+            border-right: 1px solid #ccc;
+       
+            box-sizing: border-box;
+          }
+        .newsMenu{
+          float: center;
+          background-color: #E0E2DB;
+          text:white;
+          margin-left:2.6em;
+        padding-left:3em;
+       padding-right:auto;
+       width:85.2%;
+
+
+          display:flex;
+          font-style:new-times-roman;
+          font-size:1.5em;
+          margin-top:0em;
+          margin-bottom:0em;
+          padding-bottom:2em;
             padding: 5px 0;
             text-align: center;
             border-left: 1px solid #fff;
@@ -166,9 +189,10 @@ export default class Music extends React.Component{
              width: 80%;
              float:left;
             border: 1px solid #774E90;
-            background-color: #BFA6CC;
+            background-color: #8B8BAE;
             padding: 2em;
             margin: 4em;
+            margin-top:.5em;
           }
           .author {
             font-style: italic;

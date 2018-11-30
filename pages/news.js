@@ -195,6 +195,7 @@ export default class News extends React.Component{
             background-color: #8B8BAE;
             padding: 2em;
             margin: 4em;
+            margin-top:.5em;
           }
           .author {
             font-style: italic;

@@ -13,7 +13,8 @@ export default class SearchFormSelect extends Component{
 constructor(props){
    super(props);
    this.state = {
-    selectedOption: " "
+    selectedOption: " ",
+    newsSource: ""
      };
        }
 
