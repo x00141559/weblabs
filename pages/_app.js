@@ -6,15 +6,13 @@ import App, { Container } from 'next/app';
 
 // Import the Page component
 import Page from '../components/Page';
-
+//import searchFormSelect from './searchFormSelect';
 // Define the custom App - a class which extents the default App
 class MyApp extends App {
 
     render() {
 
-      //funtion dateConv(dateS){
-      //var d = new Date(dateS);
-      //}
+     
     
         // Compent will be the page content
         // e.g. index or about
@@ -26,7 +24,9 @@ class MyApp extends App {
                 <Page>
                     {/* Put content in Page component (template) */}  
                     <Component {...pageProps} />
-                </Page>            
+
+                </Page>  
+
             </Container>
         );
     }

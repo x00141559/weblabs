@@ -8,7 +8,7 @@ var dateFormat = require('dateformat');
 import SearchForm from '../components/SearchForm';
 
 const apiKey  = '7b5bfb90c5e5474ba7910d596b4f2114';
-const defaultNewsSource = 'Business-Insider-Uk';
+const defaultNewsSource = 'crypto-coins-news';
 
 async function getNews(url) {
 
@@ -25,7 +25,7 @@ async function getNews(url) {
     return (error);
   }
 }
-export default class Business extends React.Component{
+export default class Finance extends React.Component{
  
 
 //Use constructor ro get the props and set state
@@ -92,14 +92,14 @@ export default class Business extends React.Component{
               <img src={article.urlToImage} alt="article image" className="img-article"></img>
               <p>{article.description}</p>
               <p>{article.content}</p>
-              {/*A simple method of acessing the full url*/}
+                {/*A simple method of acessing the full url*/}
              <p><Link href={article.url}>Read More</Link></p>
-
+             
             </section>
           ))}
         </div>
 
-               <style jsx>{`
+                <style jsx>{`
         .newsMenu{
           float: center;
           background-color: #BFA6CC;
