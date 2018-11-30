@@ -27,12 +27,12 @@ body{
             padding: 5px;
             background: #9775AA;
             border: 1px solid #ccc;
-           
-            width: 85%;
+           flex-grow:true;
+            width: 84.4%;
             float:center;
             margin-left:4em;
             margin-right:40em;
-            margin-bottom:3em;
+            margin-bottom:0em;
           
 
         }
@@ -48,11 +48,11 @@ body{
         nav ul li {
             list-style: none;
             float: left;
-            flex-grow: 3;
+            flex-grow: 5;
 
             text-align: center;
             border-left: 1px solid #fff;
-            border-right: 1px solid #ccc;
+          
             width: 16.6667%; /* fallback for non-calc() browsers */
             width: calc(100% / 9);
             box-sizing: border-box;

@@ -15,7 +15,7 @@ export default class SearchForm extends Component {
     // Validate input value
     if (event.target.newsSource.value != "") {
      
-      this.props.setNewsSource(event.target.newsSource);
+      this.props.setNewsSource(event.target.newsSource.value);
     }
     // prevent page reload (prevent submit)
     event.preventDefault();
@@ -44,8 +44,13 @@ export default class SearchForm extends Component {
           </form>
         </div>
           <style jsx>{`
+          .button
+          {
+            color:red;
+          }
             h3{
                 float: center;
+          }
           background-color: #BFA6CC;
           text:white;
           margin-left:4em;
@@ -60,7 +65,7 @@ export default class SearchForm extends Component {
           float: center;
           background-color: #BFA6CC;
           text:white;
-          margin-left:4em;
+          margin-left:10em;
           margin-right: 10em;
           margin-bottom:0em;
           padding-bottom:0em;

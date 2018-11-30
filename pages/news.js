@@ -104,6 +104,23 @@ export default class News extends React.Component{
         </div>
 
              <style jsx>{`
+          search{
+               float: center;
+          background-color: #BFA6CC;
+          text:white;
+          margin-left:4em;
+          margin-right: 10em;
+          display:flex;
+          font-style:new-times-roman;
+          font-size:1em;
+          margin-top:0em;
+            padding: 5px 0;
+            text-align: center;
+            border-left: 1px solid #fff;
+            border-right: 1px solid #ccc;
+       
+            box-sizing: border-box;
+          }
         .newsMenu{
           float: center;
           background-color: #BFA6CC;
