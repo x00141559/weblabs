@@ -28,7 +28,7 @@ body{
             background: #B8B3E9;
             border: 1px solid #ccc;
            flex-grow:true;
-            width: 84.4%;
+            margin-right:9.9em;
             float:center;
             margin-left:4em;
           

@@ -12,9 +12,15 @@ export default class SearchFormSelect extends Component{
   
 constructor(props){
    super(props);
+      this.handleChange= this.handleChange.bind(this);
+
    this.state = {
-    selectedOption: " ",
-    newsSource: ""
+	selectedOption: {
+		value: "mtv-news"
+	}
+    
+
+
      };
        }
 
@@ -27,13 +33,17 @@ constructor(props){
     // prevent page reload (prevent submit)
     event.preventDefault();
   };
+
+
   handleChange = (selectedOption) => {
-    
-      this.setState(event.target.selectedOption);
+ 
+      this.props.setState(event.selectedOption.value);
     console.log(`Option selected:`, selectedOption);
-  }
+  
+};
+
   render() {
-         const {selectedOption} = this.state;
+         const {selectedOption} = this.state.selectedOption;
 
     return (
     	  <div id="search">
@@ -42,23 +52,24 @@ constructor(props){
     	
     	   <form onSubmit={this.formSubmitted}>
       <Select
-        value={selectedOption.value}
-        onChange={this.handleChange}
+        value={selectedOption}
+        onChange={this.handleChange.bind(this)}
         options={options}
         form={SearchForm}
-onSubmit={this.formSubmitted}
+        onSubmit={this.formSubmitted}
       />
       </form>
-           <button>Update News</button>
+           <button >Update News</button>
    
 
          <style jsx>{`
           button
           {
           	background-color:white;
-            color: #90E0F3;
+            color: #B8B3E9;
             float: center;
-            margin-left:2em;
+            margin-left:10em;
+            width:40%;
           }
             h3{
                 float: center;
@@ -75,7 +86,7 @@ onSubmit={this.formSubmitted}
             }
          form{
           float: center;
-          background-color: #BFA6CC;
+          background-color: cream;
           text:white;
           margin-left:10em;
           margin-right: 10em;
@@ -85,6 +96,7 @@ onSubmit={this.formSubmitted}
           font-style:new-times-roman;
           font-size:1em;
             padding: 5px 0;
+            width:40%
            }
            li{
                list-style-type: none;
@@ -148,6 +160,14 @@ onSubmit={this.formSubmitted}
 
 
 
+
+SearchFormSelect.defaultProps = {
+  SelectedOption: {
+    value: "",
+    label: "",
+  
+  }
+};
 
 
 

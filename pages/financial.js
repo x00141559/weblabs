@@ -117,14 +117,14 @@ export default class Finance extends React.Component{
        
             box-sizing: border-box;
           }
-        .newsMenu{
+     .newsMenu{
           float: center;
           background-color: #E0E2DB;
           text:white;
           margin-left:2.6em;
         padding-left:3em;
        padding-right:auto;
-       width:85.2%;
+      margin-right:6.7em;
 
 
           display:flex;

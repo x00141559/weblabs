@@ -9,7 +9,8 @@ const Index = props => (
 
 
   <div>
-  <h1>All The News</h1>
+
+  <h3>Latest News</h3>
 
     <ul>
             <li><Link href="/index"><a>Home</a></Link></li>
@@ -21,7 +22,7 @@ const Index = props => (
            </ul>
 
   <div>
-  <h1>Batman TV Shows</h1>
+  
   <ul>
     {props.shows.map(({show}) => (
       <li key={show.id}>
@@ -38,23 +39,29 @@ const Index = props => (
 
         <style jsx>{`
        
-        h1{
+        h3{
 
             padding-left:9em;
             color:#582A72;
+            background-color:#E0E2DB;
+            margin-top:0;
+            margin-left:3.5em;
+            margin-right:8.5em;
+            padding-bottom:2em;
           }
           li {
-            font-style: italic;
+            font-style: 'Arial'
             font-size: 2em;
             font-weight: bold;
 
             width: 300px;
-            border: 25px solid #9775AA;
+            border: 2px solid #9775AA;
             padding: 25px;
             margin: 25px;
             float:left;
             list-style: none;
             text-decoration:none;
+            background-color:#E0E2DB;
           }
           .img-article
           {

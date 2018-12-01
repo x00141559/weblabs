@@ -72,7 +72,8 @@ export default class News extends React.Component{
         <div>
             { /* Add the SearchForm component */}
         { /* Pass the setNewsSource function as a prop with the same name*/}
-          <SearchFormSelect setNewsSource={this.setNewsSource} />
+     
+               <SearchFormSelect setNewsSource={this.setNewsSource} />
 
         { /* Example search links - note using name attribute for parameters(!!) */}
         <ul className="newsMenu">
@@ -128,7 +129,7 @@ export default class News extends React.Component{
           margin-left:2.6em;
         padding-left:3em;
        padding-right:auto;
-       width:85.2%;
+      margin-right:6.7em;
 
 
           display:flex;
