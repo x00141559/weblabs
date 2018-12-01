@@ -41,7 +41,7 @@ export default class Finance extends React.Component{
   }
 
   setNewsSource = (input) => {
-    this.setState = ({
+    this.setState ({
       newsSource: input,
       url: `https://newsapi.org/v2/top-headlines?sources=${input}&apiKey=${apiKey}`
     })
@@ -99,17 +99,24 @@ export default class Finance extends React.Component{
             </section>
           ))}
         </div>
- <style jsx>{`
-          search{
-               float: center;
-          background-color: #BFA6CC;
-          text:white;
-          margin-left:4em;
-          margin-right: 10em;
-          display:flex;
-          font-style:new-times-roman;
-          font-size:1em;
-          margin-top:0em;
+    <style jsx>{`
+            h3{
+
+              margin-left:7em;
+              colour: purple;
+            }
+
+             
+            search{
+                 float: center;
+            background-color: #BFA6CC;
+            text:white;
+            margin-left:4em;
+            margin-right: 10em;
+            display:flex;
+            font-style:new-times-roman;
+            font-size:1em;
+            margin-top:0em;
             padding: 5px 0;
             text-align: center;
             border-left: 1px solid #fff;
@@ -117,40 +124,42 @@ export default class Finance extends React.Component{
        
             box-sizing: border-box;
           }
-     .newsMenu{
+        .newsMenu{
           float: center;
           background-color: #E0E2DB;
           text:white;
           margin-left:2.6em;
-        padding-left:3em;
-       padding-right:auto;
-      margin-right:6.7em;
+          padding-left:3em;
+          padding-right:auto;
+          margin-right:6.7em;
+          padding-bottom:2em;
+
 
 
           display:flex;
           font-style:new-times-roman;
           font-size:1.5em;
           margin-top:0em;
-          margin-bottom:0em;
+          margin-bottom:2em;
           padding-bottom:2em;
-            padding: 5px 0;
-            text-align: center;
-            border-left: 1px solid #fff;
-            border-right: 1px solid #ccc;
-       
-            box-sizing: border-box;
+          padding: 5px 0;
+          text-align: center;
+          border-left: 1px solid #fff;
+          border-right: 1px solid #ccc;
+          box-sizing: border-box;
 
            }
+
            li{
-               list-style-type: none;
-                     font-size: 0.8em;
+            list-style-type: none;
+            font-size: 0.8em;
             display: block;
             text-decoration: none;
             color: black;
             padding: 5px 0;
             font-weight:bold;
-           
-            padding-right:1em;
+            padding-left:2em;
+            padding-right:6em;
             }
            /* unvisited link */
           a:link {
@@ -172,37 +181,39 @@ export default class Finance extends React.Component{
               color: purple;
           }
 
-       body{
-        margin-left: 20em;
-        margin-right: 20em;
-        margin-top: auto;
-       }
-       h2{
-        font-size:3em;
-        float:center;
-        color:#774E90;
-        padding-left: 4em;
-       }
-          section{
+           body{
+            margin-left: 20em;
+            margin-right: 20em;
+            margin-top: auto;
+           }
+           h2{
+            font-size:3em;
+            float:center;
+            color:#774E90;
+            padding-left: 4em;
+           }
+            section{
 
-             width: 80%;
-             float:left;
-            border: 1px solid #774E90;
-            background-color: #8B8BAE;
-            padding: 2em;
-            margin: 4em;
-            margin-top:.5em;
-          }
-          .author {
-            font-style: italic;
-            font-size: 1em;
+               width: 30%;
+               float:left;
+              border: 1px solid #774E90;
+              background-color: #8B8BAE;
+              padding: 2em;
+              margin-right:2em;
+              margin: 4em;
+              margin-top:.5em;
+              margin-left:7em;
+            }
+            .author {
+              font-style: italic;
+              font-size: 1em;
 
-          }
-          .img-article
-          {
-            max-width: 50%;
-            
-          }
+            }
+            .img-article
+            {
+              max-width: 90%;
+              
+            }
         `}</style>
     </div>
   );

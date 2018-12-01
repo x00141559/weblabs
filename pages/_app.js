@@ -3,8 +3,16 @@
 
 // Import App and Container dependencies
 import App, { Container } from 'next/app';
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+import { faNewspaper } from '@fortawesome/free-solid-svg-icons'
+import { faPaw} from '@fortawesome/free-solid-svg-icons'
+
+library.add(faNewspaper);
+library.add(faPaw);
 
 // Import the Page component
+
 import Page from '../components/Page';
 //import searchFormSelect from './searchFormSelect';
 // Define the custom App - a class which extents the default App

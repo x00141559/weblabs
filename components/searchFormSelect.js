@@ -5,7 +5,9 @@ import SearchForm from '../components/SearchForm';
 const options = [
   { value: 'the-irish-times', label: 'Irish News' },
   { value: 'mtv-news', label: 'Mtv Music' },
-  { value: 'nfl-sport', label: 'Sport news' }
+  { value: 'nfl-news', label: 'Sport news' },
+  { value: 'crypto-coins-news', label: 'Crypto News'},
+  { value: 'bbc-news', label: 'BBC News'}
 ];
 
 export default class SearchFormSelect extends Component{
@@ -37,7 +39,8 @@ constructor(props){
 
   handleChange = (selectedOption) => {
  
-      this.props.setState(event.selectedOption.value);
+      this.setState({selectedOption});
+      this.props.setNewsSource(selectedOption.value);
     console.log(`Option selected:`, selectedOption);
   
 };
@@ -48,7 +51,7 @@ constructor(props){
     return (
     	  <div id="search">
        
-          <h3>Enter newsapi.org source</h3>
+    
     	
     	   <form onSubmit={this.formSubmitted}>
       <Select
@@ -59,10 +62,11 @@ constructor(props){
         onSubmit={this.formSubmitted}
       />
       </form>
-           <button >Update News</button>
+   
    
 
          <style jsx>{`
+         
           button
           {
           	background-color:white;
@@ -88,15 +92,16 @@ constructor(props){
           float: center;
           background-color: cream;
           text:white;
-          margin-left:10em;
+          margin-left:5em;
           margin-right: 10em;
           margin-bottom:0em;
           margin-top:0em;
           padding-bottom:0em;
+          padding-top:3em;
           font-style:new-times-roman;
           font-size:1em;
             padding: 5px 0;
-            width:40%
+            width:30%
            }
            li{
                list-style-type: none;

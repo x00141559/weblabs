@@ -17,6 +17,10 @@ const Post = withRouter((props) => (
         />
     </div>
     <style jsx global>{`
+      h1
+      {
+        padding-left:4em;
+      }
       .markdown {
         font-family: "Arial";
       }
@@ -29,10 +33,11 @@ const Post = withRouter((props) => (
       }
       .markdown h3 {
         margin: 0;
-        padding: 0;
+        padding-left: 5em;
+        float: center;
         text-transform: uppercase;
       }
     `}</style>
   </div>
 ));
-export default Postm
+export default Post
