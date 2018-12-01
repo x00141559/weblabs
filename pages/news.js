@@ -27,7 +27,6 @@ async function getNews(url) {
 }
 export default class News extends React.Component{
  
-
 //Use constructor ro get the props and set state
   constructor(props){
     super(props)
@@ -35,25 +34,22 @@ export default class News extends React.Component{
     this.state = {
       newsSource: "",
       url: "",
-      articles: [],    
-   
+      articles: []
     }
   }
 
-    setNewsSource =(input) => {
-    this.setState  ({
+  setNewsSource = (input) => {
+    this.setState ({
       newsSource: input,
       url: `https://newsapi.org/v2/top-headlines?sources=${input}&apiKey=${apiKey}`
     })
   }
 
-    
-
   searchNewsAPI = (event) => {
     // set state values - this will trigger an update and componentDidUpdate
     this.setState({
       // Get the link text
-      newsSource: `${event.target.selectedOption}`,
+      newsSource: `${event.target.innerText}`,
       // Build the search URL using the link name
       url: `https://newsapi.org/v2/${event.target.name}&apiKey=${apiKey}`
     })
@@ -68,13 +64,12 @@ export default class News extends React.Component{
         this.state.articles = this.props.articles;
       }
 
+
       return (
         <div>
             { /* Add the SearchForm component */}
         { /* Pass the setNewsSource function as a prop with the same name*/}
-     
-               <SearchFormSelect setNewsSource={this.setNewsSource} />
-
+             <SearchFormSelect setNewsSource={this.setNewsSource} />
         { /* Example search links - note using name attribute for parameters(!!) */}
         <ul className="newsMenu">
           <li><a href="#" onClick={this.searchNewsAPI} name="top-headlines?country=ie">Top Headlines Ireland</a></li>
@@ -99,7 +94,7 @@ export default class News extends React.Component{
               <p>{article.content}</p>
                 {/*A simple method of acessing the full url*/}
              <p><Link href={article.url}>Read More</Link></p>
-            
+      
             </section>
           ))}
         </div>
