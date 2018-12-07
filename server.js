@@ -3,7 +3,8 @@ const next = require('next')
 const cors = require('cors')
 
 const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
+const prod = process.env.NODE_ENV == 'production'
+const app = next({ dev,prod })
 const handle = app.getRequestHandler()
 
 app.prepare()
