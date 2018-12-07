@@ -1,12 +1,17 @@
 // Footer component
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import Link from 'next/link'
 const Footer = () => (
     <div>
         <footer>
             <p>contact information: info@AllTheNews.com, Follow us on Twitter  </p>
+           
+              <Link href="https://newsapi.org/">Powered by News API</Link>
+               
         </footer>
         <style jsx>{`
+          
             footer {
                 background-color: black;
                 padding-botton:1em;
