@@ -3,8 +3,7 @@ const next = require('next')
 const cors = require('cors')
 
 const dev = process.env.NODE_ENV !== 'production'
-
-const app = next({ dev})
+const app = next({ dev })
 const handle = app.getRequestHandler()
 
 app.prepare()
@@ -22,7 +21,7 @@ app.prepare()
     return handle(req, res)
   })
 
-  server.listen(0.0.0.0, (err) => {
+  server.listen(3000, (err) => {
     if (err) throw err
     console.log('> Ready on http://localhost:3000')
   })
