@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    
+    "gcp-build": "npm run build",
     "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js"
+
   
   },
   "keywords": [],
